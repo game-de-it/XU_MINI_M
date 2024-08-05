@@ -9,7 +9,7 @@
 This is a CFW that modifies StockOS (AmberELEC) for MagicX XU MINI M.
 
 ## Download
-You can download the file from "Releases".
+[You can download the file from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.1)
 
 ## Update Information
 - [NEW] Beta version 0.1 released!
