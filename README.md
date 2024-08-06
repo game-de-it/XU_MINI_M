@@ -1,8 +1,13 @@
 # plumOS_XU_MINI_M
 [Click here for the English version of the explanation page](https://github.com/game-de-it/XU_MINI_M/blob/main/README_EN.md)  
 
-  <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/plumOS_XU_MINI_M.png" width="480">    <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/sc01.jpg" width="480">  
-  <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/MagicX_logo.png" width="240">  
+<img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/plumOS_XU_MINI_M.png" width="480">   
+
+  <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/MagicX_logo.png" width="240">    <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/sc01.jpg" width="240">   
+  
+  <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/sc02.jpg" width="240">   <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/sc03.jpg" width="240">   
+
+
 
 
 ## 謝辞
@@ -14,8 +19,10 @@ MagicX XU MINI MのStockOS(AmberELEC)を改修したCFWです。
 ## ダウンロード
 [「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.1)  
 
-## 更新情報
-- [NEW] β版 Ver 0.1をリリース！  
+## Beta 0.2更新情報
+- [NEW] Portmasterが動作するようになりました
+- [FIX] Emulationstationの"GAME SETTINGS"->"DEFAULT GLOBAL SETTINGS"の各項目をAUTOに変更しました
+- [FIX] SD2に"ports_scripts"ディレクトリが生成されないようにしました
 
 ## 基本情報
 - 重要！　SD1のみでは正常に動作しないため、必ずFAT32およびexFATでフォーマットされたSD2を利用してください  
@@ -25,6 +32,11 @@ MagicX XU MINI MのStockOS(AmberELEC)を改修したCFWです。
 - USB Wifiドングルでネットワークへの接続が可能
   - 対応ドライバ : RTL815x 8812AU 8821AU 8821CU 88x2BU
   - samba接続(Guest)およびSSH(rootユーザ、パスワードは"amberelec")で接続可能です
+- [NEW] PortmasterはOS起動時に自動的にSD2の"ports"ディレクトリへインストールされます
+  - SD2に"ports_scripts"ディレクトリが存在する場合は、そのディレクトリを削除してください
+  - portsセクションからPortmasterを起動できます
+  - Portmasterを利用してportsゲームをインストールした後はゲームリストを更新してください
+ 
 
 ## 既知の問題
 - Retroarch64bitではビデオドライバをglドライバにするとメニュー画面が90度回転してしまうため、OS出荷時には"sdl2"に設定してあります  
