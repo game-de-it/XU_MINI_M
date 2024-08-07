@@ -14,7 +14,7 @@
 StockOS for MagicX XU MINI M This is a modified CFW of (AmberELEC).
 
 ## Download 
-[You can download the file from "Releases". ](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.2)
+[You can download the file from "Releases". ](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.3)
 
 ## Beta 0.3 Update Information
 - [FIX] It is now possible to switch between SD1 and SD2 ROM partitions
