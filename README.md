@@ -17,26 +17,26 @@
 MagicX XU MINI MのStockOS(AmberELEC)を改修したCFWです。 
 
 ## ダウンロード
-[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.2)  
+[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.3)  
 
-## Beta 0.2更新情報
-- [NEW] Portmasterが動作するようになりました
-- [FIX] Emulationstationの"GAME SETTINGS"->"DEFAULT GLOBAL SETTINGS"の各項目をAUTOに変更しました
-- [FIX] SD2に"ports_scripts"ディレクトリが生成されないようにしました
+## Beta 0.3更新情報
+- [FIX] SD1とSD2のROMパーティションを切り替えることが可能になりました
 
 ## 基本情報
-- 重要！　SD1のみでは正常に動作しないため、必ずFAT32およびexFATでフォーマットされたSD2を利用してください  
-(StockOSで利用していたSD2はそのまま利用可能です)
 - Emulationstationの各種設定が可能
 - RetroarchとDrasticでメニュー表示が可能になり、設定を自由にすることが可能
 - USB Wifiドングルでネットワークへの接続が可能
   - 対応ドライバ : RTL815x 8812AU 8821AU 8821CU 88x2BU
   - samba接続(Guest)およびSSH(rootユーザ、パスワードは"amberelec")で接続可能です
-- [NEW] PortmasterはOS起動時に自動的にSD2の"ports"ディレクトリへインストールされます
+- PortmasterはOS起動時に自動的にSD2の"ports"ディレクトリへインストールされます
   - SD2に"ports_scripts"ディレクトリが存在する場合は、そのディレクトリを削除してください
   - portsセクションからPortmasterを起動できます
   - Portmasterを利用してportsゲームをインストールした後はゲームリストを更新してください
- 
+
+
+## SD1とSD2を切り替える手順
+- Emulationstationの"ports"セクションにある"Switch_SD"を実行します
+  - ゲームリストをアップデートしてもROMファイルが表示されない場合は、OSの再起動をしてください
 
 ## 既知の問題
 - Retroarch64bitではビデオドライバをglドライバにするとメニュー画面が90度回転してしまうため、OS出荷時には"sdl2"に設定してあります  
