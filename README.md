@@ -40,6 +40,7 @@ MagicX XU MINI MのStockOS(AmberELEC)を改修したCFWです。
   - ゲームリストをアップデートしてもROMファイルが表示されない場合は、OSの再起動をしてください
 
 ## 既知の問題
+- 🚫 重要！　OSが再起動ループをしてしまうため、"system settings"->"ENABLE OVERCLOCK"を有効にしないでください
 - Retroarch64bitではビデオドライバをglドライバにするとメニュー画面が90度回転してしまうため、OS出荷時には"sdl2"に設定してあります  
 メニュー操作をほとんどしない方は、"sdl2"よりもパフォーマンスがよい"gl"ドライバへの変更をお勧めします  
 - PCSX_ReARMedコアを利用するために、StockOSに内包されているRetroarch32bitを利用します  
