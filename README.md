@@ -23,7 +23,7 @@ MagicX XU MINI MのStockOS(AmberELEC)を改修したCFWです。
 - [FIX] SD1とSD2のROMパーティションを切り替えることが可能になりました
 
 ## 基本情報
-- 重要！　OSが再起動ループをしてしまうため、"system settings"->"ENABLE OVERCLOCK"を有効にしないでください
+- 🚫 重要！　OSが再起動ループをしてしまうため、"system settings"->"ENABLE OVERCLOCK"を有効にしないでください
 - Emulationstationの各種設定が可能
 - RetroarchとDrasticでメニュー表示が可能になり、設定を自由にすることが可能
 - USB Wifiドングルでネットワークへの接続が可能
