@@ -21,7 +21,7 @@ StockOS for MagicX XU MINI M This is a modified CFW of (AmberELEC).
 
 
 ## Basic Information
-- IMPORTANT! Do not enable "system settings"->"ENABLE OVERCLOCK" as this will cause the OS to enter a reboot loop.
+- 🚫 IMPORTANT! Do not enable "system settings"->"ENABLE OVERCLOCK" as this will cause the OS to enter a reboot loop.
 - Various settings of Emulationstation are possible
 - Menu with Retroarch and Drastic It is possible to display and freely configure it.
 - It is possible to connect to the network using a USB Wifi dongle.
@@ -38,6 +38,7 @@ StockOS for MagicX XU MINI M This is a modified CFW of (AmberELEC).
 
 
 ## Known issues
+- 🚫 IMPORTANT! Do not enable "system settings"->"ENABLE OVERCLOCK" as this will cause the OS to enter a reboot loop.
 - In Retroarch 64bit, if you set the video driver to the gl driver, the menu screen will rotate 90 degrees, so the OS is set to "sdl2" when shipped. If you rarely use menu operations, you should set it to "gl", which has better performance than "sdl2". We recommend changing the driver.
 - To use the PCSX_ReARMed core, we use Retroarch32bit included in StockOS.
 As a result, menu operations are limited  
