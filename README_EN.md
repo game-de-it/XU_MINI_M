@@ -21,7 +21,7 @@ StockOS for MagicX XU MINI M This is a modified CFW of (AmberELEC).
 
 
 ## Basic Information
-- IMPORTANT! Do not enable "systemc settings"->"ENABLE OVERCLOCK" as this will cause the OS to enter a reboot loop.
+- IMPORTANT! Do not enable "system settings"->"ENABLE OVERCLOCK" as this will cause the OS to enter a reboot loop.
 - Various settings of Emulationstation are possible
 - Menu with Retroarch and Drastic It is possible to display and freely configure it.
 - It is possible to connect to the network using a USB Wifi dongle.
