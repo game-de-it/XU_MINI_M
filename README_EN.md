@@ -83,7 +83,7 @@ scummvm/
 | Button Combo | Action |
 |:-----------|------------:|
 | L3+R3       |        Display menu |
-| SELECT+Gボタン       |        Display menu |
+| SELECT+G　button       |        Display menu |
 | SELECT+START+L+R       |        Exit |
 | SELECT+R     |      Save state |
 | SELECT+L     |      Load state |
