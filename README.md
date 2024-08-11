@@ -14,34 +14,64 @@
 - MagicX XU_MINI_MおよびAmberELECの開発チーム、XU MINI Mを愛するコミュニティーメンバーに感謝と敬意を表します。
 
 ## 特徴
-MagicX XU MINI MのStockOS(AmberELEC)を改修したCFWです。 
+MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。 
 
 ## ダウンロード
-[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.4)  
+[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.5)  
 
-## Beta 0.4更新情報
-- [NEW] ネイティブのPICO-8が起動可能になり、ネットワークを使ってゲームをDLすることが可能になりました
-- [NEW] ScummVMスタンドアローンが起動できるようになりました
+## Beta 0.5更新情報
+- [FIX] 不必要になったportsファイルを削除しました
+- [NEW] StockOS_20240811がベースになりました
+- [NEW] CPUクロックの可動範囲が400MHz~1500MHzに変更されました
+  - 変更前の可動域は1000MHz~1300MHz
+  - これは実験的な機能なのでなんらかの問題が生じる可能性があります
+  - コミュニティの皆さんに感謝します！
+- [NEW] USB-DACおよびBluetooth AUDIOに対応しました
+> [!WARNING]
+> 全てのUSB-DACおよびBluetooth AUDIOで動作することは保証しません。    
+> 音量調整できない機器があるため大音量で音が流れる可能性があります。  
+> 初めて利用する場合はイヤホンを耳に装着せずに音を鳴らしてください。  
+> スピーカーに接続する場合は、スピーカー側の音量をあらかじめ小さくしてから音を鳴らしてください。  
+> エミュレーターによっては音が途切れたり、動作が不安定になる場合があります。  
+
 
 ## 基本情報
-> [!CAUTION]  
-> OSが再起動ループをしてしまうため、`system settings->ENABLE OVERCLOCK`を有効にしないでください
-
-- Emulationstationの各種設定が可能
-- RetroarchとDrasticでメニュー表示が可能になり、設定を自由にすることが可能
 - USB Wifiドングルでネットワークへの接続が可能
   - 対応ドライバ : RTL815x 8812AU 8821AU 8821CU 88x2BU
   - samba接続(`Guest`ユーザ)およびSSH(`root`ユーザ、パスワードは`amberelec`)で接続可能です
 - PortmasterはOS起動時に自動的にSDの`ports`ディレクトリへインストールされます
-  - SD2に`ports_scripts`ディレクトリが存在する場合は、そのディレクトリを削除してください
+  - SDカードに`ports_scripts`ディレクトリが存在する場合は、そのディレクトリを削除してください
   - portsセクションからPortmasterを起動できます
   - Portmasterを利用してportsゲームをインストールした後はゲームリストを更新してください
 
+---
+
+## 既知の問題
+> [!CAUTION]  
+> OSが再起動ループをしてしまうため、`system settings->ENABLE OVERCLOCK`を有効にしないでください
+
+---
+
+
+## ROMディレクトリの自動作成
+- FAT32でフォーマットされたSD2を接続した状態でOSを起動すると、自動的にROMディレクトリを生成してくれます
+
 
 ## SD1とSD2を切り替える手順
-- Emulationstationの`ports`セクションにある`Switch_SD`を実行します
-  - ゲームリストをアップデートしてもROMファイルが表示されない場合は、OSの再起動をしてください
- 
+- Emulationstationの`TF CARD MANAGEMENT`からSDカードを切り替えることができます
+
+## USB-DACおよびBluetooth AUDIOの使い方
+1. USBポートに機器を接続した後に、`ports`セクションにある`Switch_USB-AUDIO`を実行します
+    - 自動的に内部スピーカーへは切り替わらないので、内部スピーカーに戻したい時はもう一度`Switch_USB-AUDIO`を実行します
+3. Bluetooth機器の場合はペアリングをします
+4. ゲームを起動して音が出ることを確認します
+> [!WARNING]
+> 全てのUSB-DACおよびBluetooth AUDIOで動作することは保証しません。    
+> 音量調整できない機器があるため大音量で音が流れる可能性があります。  
+> 初めて利用する場合はイヤホンを耳に装着せずに音を鳴らしてください。  
+> スピーカーに接続する場合は、スピーカー側の音量をあらかじめ小さくしてから音を鳴らしてください。  
+> エミュレーターによっては音が途切れたり、動作が不安定になる場合があります。  
+
 ## PICO-8の遊び方
 1. まず初めに下記サイトからPICO-8のライセンスを購入して、`Raspberry Pi`のzipファイルをダウンロードします
 https://www.lexaloffle.com/pico-8.php
@@ -68,18 +98,6 @@ scummvm/
 3. Emulationstationの`ports`セクションにある`_Scan ScummVM Games`を実行すると、`ScummVM`セクションにゲームを起動するためのファイルが作成されます
    - `_Scan ScummVM Games`がない場合はOSを再起動すると自動的に作成されるはずです
 4. `ScummVM`セクションの`Beneath a Steel Sky (sky)`を実行するとゲームが開始します
-
-## 既知の問題
-> [!CAUTION]  
-> OSが再起動ループをしてしまうため、`system settings->ENABLE OVERCLOCK`を有効にしないでください
-
-- Retroarch64bitではビデオドライバをglドライバにするとメニュー画面が90度回転してしまうため、OS出荷時には`sdl2`に設定してあります
-メニュー操作をほとんどしない方は、`sdl2`よりもパフォーマンスがよい`gl`ドライバへの変更をお勧めします  
-- PCSX_ReARMedコアを利用するために、StockOSに内包されているRetroarch32bitを利用します  
-そのためメニュー操作が限られます（メニューを表示するには`Gボタン`を押してください）
-
-## romsディレクトリの自動作成
-- フォーマットされたSD2を接続した状態でOSを起動すると、自動的にROMディレクトリを生成してくれます  
 
 ## Retroarch仕様
 - セーブファイル(srm)およびステートセーブファイルは、ROMファイルと同じディレクトリ内に作成されます(変更可能)
