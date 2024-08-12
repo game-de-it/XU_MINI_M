@@ -64,6 +64,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 1. USBポートに機器を接続した後に、`ports`セクションにある`Switch_USB-AUDIO`を実行します
     - 自動的に内部スピーカーへは切り替わらないので、内部スピーカーに戻したい時はもう一度`Switch_USB-AUDIO`を実行します
 3. Bluetooth機器の場合はペアリングをします
+    - 動作確認済みの型番 `GuliKit Route Air`
 4. ゲームを起動して音が出ることを確認します
 > [!WARNING]
 > 全てのUSB-DACおよびBluetooth AUDIOで動作することは保証しません。    
