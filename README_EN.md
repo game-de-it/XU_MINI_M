@@ -60,6 +60,7 @@ This is a custom firmware (CFW) modified from the StockOS_20240811 (AmberELEC) o
 1. After connecting the device to the USB port, run `Switch_USB-AUDIO` in the `ports` section.
     - It will not automatically switch to the internal speaker, so if you want to switch back to the internal speaker, run `Switch_USB-AUDIO` again.
 2. For Bluetooth devices, pair them.
+    - - Operation-confirmed model number `GuliKit Route Air`
 3. Start a game and confirm that audio is playing.
 > [!WARNING]
 > We do not guarantee that all USB-DACs and Bluetooth AUDIO devices will work.  
