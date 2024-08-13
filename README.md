@@ -58,7 +58,11 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 
 
 ## SD1とSD2を切り替える手順
-- Emulationstationの`TF CARD MANAGEMENT`からSDカードを切り替えることができます
+- Emulationstationの`TF CARD MANAGEMENT`にある機能を使うと、SD1とSD2のROMディレクトリがあるパーティションを切り替えることができます
+
+> [!TIP]
+> SD2を利用するメリットは、OSのアップデートをするたびにROMファイルを準備する必要がなくなることです。
+
 
 ## USB-DACおよびBluetooth AUDIOの使い方
 1. USBポートに機器を接続した後に、`ports`セクションにある`Switch_USB-AUDIO`を実行します
