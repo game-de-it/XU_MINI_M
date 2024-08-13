@@ -54,7 +54,12 @@ This is a custom firmware (CFW) modified from the StockOS_20240811 (AmberELEC) o
 - When you start the OS with SD2 formatted in FAT32 connected, ROM directories will be automatically generated.
 
 ## Procedure for Switching Between SD1 and SD2
-- You can switch SD cards from Emulationstation's `TF CARD MANAGEMENT`.
+- Using the function in `TF CARD MANAGEMENT` of Emulationstation, you can switch the partition where the ROM directory of SD1 and SD2 are located.
+
+> [!TIP]
+> The advantage of using SD2 is that you no longer need to prepare ROM files every time you update your OS.
+
+---
 
 ## How to Use USB-DAC and Bluetooth AUDIO
 1. After connecting the device to the USB port, run `Switch_USB-AUDIO` in the `ports` section.
