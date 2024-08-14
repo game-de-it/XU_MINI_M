@@ -18,7 +18,7 @@ This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MI
 - Contributors (in no particular order)
   - fishku, Ry, snake, shauninman, Gamma, and All Retro Handhelds community members!
 
-## Beta 0.5 Update Information
+## Beta 0.6 Update Information
 - [FIX] The process of automatically generating ROM directories has been revised, and unnecessary directories like "wii" have been removed.
 - [FIX] Various settings in Emulationstation's `DEFAULT GLOBAL SETTINGS` and `ADVANCED SYSTEM OPTIONS` have been revised.
 - [FIX] Additions/fixes related to Retroarch:
