@@ -20,7 +20,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 - 貢献者(順不同)
   - fishku,Ry,snake,shauninman,Gamma,　and All Retro Handhelds community members!
   
-## Beta 0.5更新情報
+## Beta 0.6更新情報
 - [FIX] ROMディレクトリの自動生成の処理が見直され、wiiなど不要なディレクトリが削除されました
 - [FIX] Emulationstationの`DEFAULT GLOBAL SETTINGS`や`ADVANCED SYSTEM OPTIONS`の各設定が見直されました
 - [FIX] Retroarch関連の追加/修正
