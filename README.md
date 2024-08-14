@@ -9,30 +9,27 @@
 
 
 
-
-## 謝辞
-- MagicX XU_MINI_MおよびAmberELECの開発チーム、XU MINI Mを愛するコミュニティーメンバーに感謝と敬意を表します。
-
 ## 特徴
 MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。 
 
 ## ダウンロード
-[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.5)  
+[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.6)  
 
+## 謝辞
+- MagicX XU_MINI_MおよびAmberELECの開発チーム、XU MINI Mを愛するコミュニティーメンバーに感謝と敬意を表します。
+- 貢献者(順不同)
+  - fishku,Ry,snake,shauninman,Gamma,　and All Retro Handhelds community members!
+  
 ## Beta 0.5更新情報
-- [FIX] 不必要になったportsファイルを削除しました
-- [NEW] StockOS_20240811がベースになりました
-- [NEW] CPUクロックの可動範囲が400MHz~1500MHzに変更されました
-  - 変更前の可動域は1000MHz~1300MHz
-  - これは実験的な機能なのでなんらかの問題が生じる可能性があります
-  - コミュニティの皆さんに感謝します！
-- [NEW] USB-DACおよびBluetooth AUDIOに対応しました
-> [!WARNING]
-> 全てのUSB-DACおよびBluetooth AUDIOで動作することは保証しません。    
-> 音量調整できない機器があるため大音量で音が流れる可能性があります。  
-> 初めて利用する場合はイヤホンを耳に装着せずに音を鳴らしてください。  
-> スピーカーに接続する場合は、スピーカー側の音量をあらかじめ小さくしてから音を鳴らしてください。  
-> エミュレーターによっては音が途切れたり、動作が不安定になる場合があります。  
+- [FIX] ROMディレクトリの自動生成の処理が見直され、wiiなど不要なディレクトリが削除されました
+- [FIX] Emulationstationの`DEFAULT GLOBAL SETTINGS`や`ADVANCED SYSTEM OPTIONS`の各設定が見直されました
+- [FIX] Retroarch関連の追加/修正
+    - いくつかのデフォルト設定が変更されました
+    - 幾つかのシェーダーが追加されました
+    - 幾つかのオーバーレイフィルターが追加されました
+    - SNES9Xにてスクロール処理がスムーズになりました
+- [NEW] さらに多くのUSB-DACの音量コントロールに対応しました
+- [NEW] Emulationstationのテーマを自動的にインストールする機能が追加されました(使い方は後述)
 
 
 ## 基本情報
@@ -43,6 +40,9 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
   - SDカードに`ports_scripts`ディレクトリが存在する場合は、そのディレクトリを削除してください
   - portsセクションからPortmasterを起動できます
   - Portmasterを利用してportsゲームをインストールした後はゲームリストを更新してください
+- CPU周波数は負荷に応じて自動的に400MHz~1500MHzの間で増減します
+  - ただしROM選択画面で`SELECT`ボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`がONに設定している場合は常に1500MHzで動作します
+  - 全てのエミュレータでかつ常に1500MHzで動作させる場合は、Emulationstationの`GAME SETTINGS`->`ENABLE MAX PERFORMANCE`をONに設定します
 
 ---
 
@@ -55,7 +55,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 
 ## ROMディレクトリの自動作成
 - FAT32でフォーマットされたSD2を接続した状態でOSを起動すると、自動的にROMディレクトリを生成してくれます
-
+- `ports`セクションにある`Create_ROMdir_SD`を実行するとSD1およびSD2にROMディレクトリが作成されます
 
 ## SD1とSD2を切り替える手順
 - Emulationstationの`TF CARD MANAGEMENT`にある機能を使うと、SD1とSD2のROMディレクトリがあるパーティションを切り替えることができます
@@ -65,17 +65,28 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 
 
 ## USB-DACおよびBluetooth AUDIOの使い方
+### 仕様
+- 動作確認済みBluetooth AUDIOドングル
+  - Creative BT-W2
+  - GuliKit Route Air  
+- 内部スピーカーに戻したい時はもう一度`Switch_USB-AUDIO`を実行します
+- USB-DACおよびBluetooth AUDIOをUSBポートから抜いた状態でOS再起動すると、自動的に内部スピーカーへ切り替わります
+- `Switch_USB-AUDIO`を実行しても切り替わらない場合、USBポートからデバイスを抜いて再度USBポートに差し込んでみてください
+
+### 使い方
 1. USBポートに機器を接続した後に、`ports`セクションにある`Switch_USB-AUDIO`を実行します
-    - 自動的に内部スピーカーへは切り替わらないので、内部スピーカーに戻したい時はもう一度`Switch_USB-AUDIO`を実行します
-3. Bluetooth機器の場合はペアリングをします
-    - 動作確認済みの型番 `GuliKit Route Air`
-4. ゲームを起動して音が出ることを確認します
+2. Bluetooth機器の場合はペアリングをします
+3. ゲームを起動して音が出ることを確認します
 > [!WARNING]
 > 全てのUSB-DACおよびBluetooth AUDIOで動作することは保証しません。    
 > 音量調整できない機器があるため大音量で音が流れる可能性があります。  
-> 初めて利用する場合はイヤホンを耳に装着せずに音を鳴らしてください。  
-> スピーカーに接続する場合は、スピーカー側の音量をあらかじめ小さくしてから音を鳴らしてください。  
 > エミュレーターによっては音が途切れたり、動作が不安定になる場合があります。  
+
+
+## Emulationstationのテーマを自動的にインストール
+1. SDカード内の`ports/themes`ディレクトリにEmulationstationのテーマファイル(.zip)をコピーします
+2. Emulationstationのportsセクションにある`Install_Themes`を実行します
+3. `UI SETTINGS`->`THEME SET`からインストールしたテーマを選択できます
 
 ## PICO-8の遊び方
 1. まず初めに下記サイトからPICO-8のライセンスを購入して、`Raspberry Pi`のzipファイルをダウンロードします
