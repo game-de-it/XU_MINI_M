@@ -38,8 +38,8 @@ This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MI
   - You can start Portmaster from the ports section.
   - After installing a ports game using Portmaster, please update the game list.
 - The CPU frequency will automatically increase or decrease between 400MHz and 1500MHz depending on the load.
-  - However, if you press the SELECT button on the ROM selection screen and set ENABLE MAX PERFORMANCE in ADVANCED SYSTEM OPTIONS to ON, it will always run at 1500MHz.
-  - To run it at 1500MHz on all emulators, set GAME SETTINGS -> ENABLE MAX PERFORMANCE to ON in Emulationstation.
+  - However, if you press the `SELECT` button on the ROM selection screen and set `ENABLE MAX PERFORMANCE` in `ADVANCED SYSTEM OPTIONS` to ON, it will always run at 1500MHz.
+  - To run it at 1500MHz on all emulators, set `GAME SETTINGS` -> `ENABLE MAX PERFORMANCE` to ON in Emulationstation.
 
 ---
 
