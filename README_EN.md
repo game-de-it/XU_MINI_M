@@ -10,23 +10,16 @@
 This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MINI M.
 
 ## Download
-[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.6)
+[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.7)
 
 ## Acknowledgments
 - We express our gratitude and respect to the development teams of MagicX XU_MINI_M and AmberELEC, as well as to the community members who love the XU MINI M.
 - Contributors (in no particular order)
   - fishku, Ry, snake, shauninman, Gamma, and All Retro Handhelds community members!
 
-## Beta 0.6 Update Information
-- [FIX] The process of automatically generating ROM directories has been revised, and unnecessary directories like "wii" have been removed.
-- [FIX] Various settings in Emulationstation's `DEFAULT GLOBAL SETTINGS` and `ADVANCED SYSTEM OPTIONS` have been revised.
-- [FIX] Additions/fixes related to Retroarch:
-    - Some default settings have been changed.
-    - Several shaders have been added.
-    - Several overlay filters have been added.
-    - Scrolling processes in SNES9X have been made smoother.
-- [NEW] Added support for volume control on more USB-DAC devices.
-- [NEW] A feature to automatically install themes for Emulationstation has been added (usage is explained later).
+## Beta 0.7 Update Information
+- [FIX] The frequencies of CPU, GPU, and MEM have been increased to 1600MHz, 900MHz, and 1000MHz, respectively.
+  - This is an experimental feature.
 
 ## Basic Information
 - You can connect to the network using a USB Wifi dongle.
@@ -36,9 +29,10 @@ This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MI
   - If the `ports_scripts` directory exists on the SD card, please delete that directory.
   - You can start Portmaster from the ports section.
   - After installing a ports game using Portmaster, please update the game list.
-- The CPU frequency will automatically increase or decrease between 400MHz and 1500MHz depending on the load.
-  - However, if you press the `SELECT` button on the ROM selection screen and set `ENABLE MAX PERFORMANCE` in `ADVANCED SYSTEM OPTIONS` to ON, it will always run at 1500MHz.
-  - To run it at 1500MHz on all emulators, set `GAME SETTINGS` -> `ENABLE MAX PERFORMANCE` to ON in Emulationstation.
+- By default, the CPU frequency automatically scales between 400MHz and 1600MHz depending on the load, except for some emulators.
+  - If you want to set this for each emulator, press the `SELECT` button on the ROM selection screen and turn ON `ENABLE MAX PERFORMANCE` in `ADVANCED SYSTEM OPTIONS`.
+  - If you want to set this for each ROM, highlight the desired ROM, press the Y button, and turn ON `ENABLE MAX PERFORMANCE` in `ADVANCED SYSTEM OPTIONS`.
+  - If you want to set this for all emulators, turn ON `ENABLE MAX PERFORMANCE` in Emulationstation's `GAME SETTINGS`.
 
 ---
 
