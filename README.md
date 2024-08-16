@@ -13,23 +13,16 @@
 MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。 
 
 ## ダウンロード
-[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.6)  
+[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.7)  
 
 ## 謝辞
 - MagicX XU_MINI_MおよびAmberELECの開発チーム、XU MINI Mを愛するコミュニティーメンバーに感謝と敬意を表します。
 - 貢献者(順不同)
   - fishku,Ry,snake,shauninman,Gamma,　and All Retro Handhelds community members!
   
-## Beta 0.6更新情報
-- [FIX] ROMディレクトリの自動生成の処理が見直され、wiiなど不要なディレクトリが削除されました
-- [FIX] Emulationstationの`DEFAULT GLOBAL SETTINGS`や`ADVANCED SYSTEM OPTIONS`の各設定が見直されました
-- [FIX] Retroarch関連の追加/修正
-    - いくつかのデフォルト設定が変更されました
-    - 幾つかのシェーダーが追加されました
-    - 幾つかのオーバーレイフィルターが追加されました
-    - SNES9Xにてスクロール処理がスムーズになりました
-- [NEW] さらに多くのUSB-DACの音量コントロールに対応しました
-- [NEW] Emulationstationのテーマを自動的にインストールする機能が追加されました(使い方は後述)
+## Beta 0.7更新情報
+- [FIX] CPU 1600MHz,GPU 900MHz,MEM1000MHzにそれぞれの周波数が引き上げられました
+  - これは実験的な機能です
 
 
 ## 基本情報
@@ -40,9 +33,10 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
   - SDカードに`ports_scripts`ディレクトリが存在する場合は、そのディレクトリを削除してください
   - portsセクションからPortmasterを起動できます
   - Portmasterを利用してportsゲームをインストールした後はゲームリストを更新してください
-- CPU周波数は負荷に応じて自動的に400MHz~1500MHzの間で増減します
-  - ただしROM選択画面で`SELECT`ボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`がONに設定している場合は常に1500MHzで動作します
-  - 全てのエミュレータでかつ常に1500MHzで動作させる場合は、Emulationstationの`GAME SETTINGS`->`ENABLE MAX PERFORMANCE`をONに設定します
+- デフォルトでは一部のエミュレータを除いてCPU周波数は負荷に応じて自動的に400MHz~1600MHzの間で増減します
+  - エミュレーターごとに設定をする場合はROM選択画面で`SELECT`ボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`をONに設定します
+  - ROMごとに設定する場合は、任意のROMにカーソルを合わせてYボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`をONに設定します
+  - 全てのエミュレータに設定させる場合は、Emulationstationの`GAME SETTINGS`->`ENABLE MAX PERFORMANCE`をONに設定します
 
 ---
 
