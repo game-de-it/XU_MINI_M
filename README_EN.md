@@ -10,16 +10,19 @@
 This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MINI M.
 
 ## Download
-[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.7)
+[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.8)
 
 ## Acknowledgments
-- We express our gratitude and respect to the development teams of MagicX XU_MINI_M and AmberELEC, as well as to the community members who love the XU MINI M.
+- We would like to express our gratitude and respect to the MagicX XU_MINI_M and AmberELEC development teams, as well as to the community members who love XU MINI M.
 - Contributors (in no particular order)
-  - fishku, Ry, snake, shauninman, Gamma, and All Retro Handhelds community members!
+  - fishku, Ry, snake, shauninman, Gamma, paletochen, and All Retro Handhelds community members!
 
-## Beta 0.7 Update Information
-- [FIX] The frequencies of CPU, GPU, and MEM have been increased to 1600MHz, 900MHz, and 1000MHz, respectively.
-  - This is an experimental feature.
+## Beta 0.8 Update Information
+- [FIX] The button layout for portmaster and moonlight new has been corrected.
+- [FIX] Directories for hacked ROMs such as nesh, gbh, etc., are now available.
+- [FIX] The dead zone and snap of the analog stick have been adjusted, enabling more precise control.
+- [FIX] The volume adjustment logic for USB-AUDIO has been modified, resolving the issue where the volume suddenly increases when switching to the internal speaker.
+- [FIX] When `ENABLE MAX PERFORMANCE` is set to ON, the CPU, GPU, and MEM frequencies are now forced to max performance.
 
 ## Basic Information
 - You can connect to the network using a USB Wifi dongle.
@@ -40,6 +43,8 @@ This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MI
 > [!CAUTION]  
 > Do not enable `system settings->ENABLE OVERCLOCK`, as it may cause the OS to enter a reboot loop.
 
+- Scraping functionality is not available.
+  
 ---
 
 ## Automatic Creation of ROM Directories
