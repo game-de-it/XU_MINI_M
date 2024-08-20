@@ -13,17 +13,19 @@
 MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。 
 
 ## ダウンロード
-[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.7)  
+[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.8)  
 
 ## 謝辞
 - MagicX XU_MINI_MおよびAmberELECの開発チーム、XU MINI Mを愛するコミュニティーメンバーに感謝と敬意を表します。
 - 貢献者(順不同)
-  - fishku,Ry,snake,shauninman,Gamma,　and All Retro Handhelds community members!
+  - fishku,Ry,snake,shauninman,Gamma,paletochen,　and All Retro Handhelds community members!
   
-## Beta 0.7更新情報
-- [FIX] CPU 1600MHz,GPU 900MHz,MEM1000MHzにそれぞれの周波数が引き上げられました
-  - これは実験的な機能です
-
+## Beta 0.8更新情報
+- [FIX] portmasterやmoonlight newのボタン配置が修正されました
+- [FIX] nesh,gbhなどハックロム用のディレクトリが利用可能になりました
+- [FIX] アナログスティックのデッドゾーンとスナップが修正され、より精密な操作が可能になりました
+- [FIX] USB-AUDIOの音量調整ロジックを変更し、内部スピーカーへ切り替わった際に音量が突然大きくなる現象が解決されました
+- [FIX] `ENABLE MAX PERFORMANCE`をONに設定された場合に、CPU,GPU,MEMの周波数がMAXパフォーマンスに強制されるようになりました
 
 ## 基本情報
 - USB Wifiドングルでネットワークへの接続が可能
@@ -34,9 +36,9 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
   - portsセクションからPortmasterを起動できます
   - Portmasterを利用してportsゲームをインストールした後はゲームリストを更新してください
 - デフォルトでは一部のエミュレータを除いてCPU周波数は負荷に応じて自動的に400MHz~1600MHzの間で増減します
-  - エミュレーターごとに設定をする場合はROM選択画面で`SELECT`ボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`をONに設定します
-  - ROMごとに設定する場合は、任意のROMにカーソルを合わせてYボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`をONに設定します
-  - 全てのエミュレータに設定させる場合は、Emulationstationの`GAME SETTINGS`->`ENABLE MAX PERFORMANCE`をONに設定します
+  - エミュレーターごとにMAXパフォーマンスを得る設定をする場合はROM選択画面で`SELECT`ボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`をONに設定します
+  - ROMごとにMAXパフォーマンスを得る設定する場合は、任意のROMにカーソルを合わせてYボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`をONに設定します
+  - 全てのエミュレータにMAXパフォーマンスを得る設定させる場合は、Emulationstationの`GAME SETTINGS`->`ENABLE MAX PERFORMANCE`をONに設定します
 
 ---
 
@@ -44,6 +46,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 > [!CAUTION]  
 > OSが再起動ループをしてしまうため、`system settings->ENABLE OVERCLOCK`を有効にしないでください
 
+- スクレイピング機能は利用できません。
 ---
 
 
