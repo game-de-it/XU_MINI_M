@@ -17,7 +17,7 @@ Towards the end of `/storage/.config/custom_start.sh`, the following lines are i
   /storage/bin/portmaster_install.sh
   /storage/bin/Startup_USB-AUDIO.sh
   /storage/bin/overlay.sh
-  /storage/bin/TurboMode.sh &   <-(Ver0.8では"&"をつけ忘れたため、0.9で修正されます)
+  /storage/bin/TurboMode.sh &   <- (The "&" was omitted in Ver0.8, this will be fixed in 0.9)
   sync
     exit 0
 ```
