@@ -17,7 +17,7 @@ Towards the end of `/storage/.config/custom_start.sh`, the following lines are i
   /storage/bin/portmaster_install.sh
   /storage/bin/Startup_USB-AUDIO.sh
   /storage/bin/overlay.sh
-  /storage/bin/TurboMode.sh &   <- (The "&" was omitted in Ver0.8, this will be fixed in 0.9)
+  /storage/bin/TurboMode.sh
   sync
     exit 0
 ```
@@ -28,7 +28,7 @@ The roles of each script are as follows:
 | Script | Action | 
 |:-----------|------------:|
 | /storage/bin/Create_ROMdir_SD.sh       |  Creates ROM directories on SD1 and SD2. |
-| /storage/bin/portsfile.sh       |  Copies several executable files to the /storage/roms/ports directory. |
+| /storage/bin/portsfile.sh       |  Copies several executable files to the /storage/.config/distribution/modules directory. |
 | /storage/bin/pico8.sh      |        Copies the necessary files for PICO-8. |
 | /storage/bin/portmaster_install.sh     |  Installs Portmaster on SD1 and SD2. |
 | /storage/bin/Startup_USB-AUDIO.sh     |  Configures USB-AUDIO settings. |
@@ -47,7 +47,7 @@ In stockOS, the overlay file system is used to gain write access to directories 
 In plumOS, an overlay script is executed during OS startup to allow writing to the `/usr/bin` directory.
 
 ## USB-AUDIO Volume Adjustment
-The stockOS kernel is built to support USB-AUDIO, and to enable its use, `/storage/bin/Startup_USB-AUDIO.sh` and `/storage/roms/ports/Switch_USB-AUDIO.sh` are used.  
+The stockOS kernel is built to support USB-AUDIO, and to enable its use, `/storage/bin/Startup_USB-AUDIO.sh` and ` /storage/.config/distribution/modules/Switch_USB-AUDIO.sh` are used.  
 These scripts ensure that if a USB-AUDIO device is connected to a USB port, `/storage/bin/vol.py` will continuously run in the background.  
 `/storage/bin/vol.py` detects when the device's volume buttons are pressed and invokes the `/storage/bin/vol` script to adjust the volume.
 
@@ -82,7 +82,7 @@ End
   /storage/bin/portmaster_install.sh
   /storage/bin/Startup_USB-AUDIO.sh
   /storage/bin/overlay.sh
-  /storage/bin/TurboMode.sh &   <-(Ver0.8では"&"をつけ忘れたため、0.9で修正されます)
+  /storage/bin/TurboMode.sh
   sync
     exit 0
 ```
@@ -92,7 +92,7 @@ End
 | script | Action | 
 |:-----------|------------:|
 | /storage/bin/Create_ROMdir_SD.sh       |  SD1とSD2にROMディレクトリを生成します。 |
-| /storage/bin/portsfile.sh       |  /storage/roms/portsディレクトリに幾つかの実行ファイルをコピーします |
+| /storage/bin/portsfile.sh       |   /storage/.config/distribution/modulesディレクトリに幾つかの実行ファイルをコピーします |
 | /storage/bin/pico8.sh      |        PICO-8に必要なファイルをコピーします |
 | /storage/bin/portmaster_install.sh     |  SD1とSD2にPortmasterをインストールします |
 | /storage/bin/Startup_USB-AUDIO.sh     |  USB-AUDIOの設定を実行します |
@@ -111,7 +111,7 @@ stockOSでは`/usr/lib/libretro`などの書き込み禁止のsquashfs内に保�
 plumOSでは`/usr/bin`ディレクトリを書き込み可能にするためのオーバレイスクリプトがOS起動時に実行されています。  
 
 ## USB-AUDIOの音量調整について
-StockOSのKernelはUSB-AUDIOが利用できるようにビルドされており、それを実際に使えるようにするために`/storage/bin/Startup_USB-AUDIO.sh`と`/storage/roms/ports/Switch_USB-AUDIO.sh`が利用されます。  
+StockOSのKernelはUSB-AUDIOが利用できるようにビルドされており、それを実際に使えるようにするために`/storage/bin/Startup_USB-AUDIO.sh`と` /storage/.config/distribution/modules/Switch_USB-AUDIO.sh`が利用されます。  
 これらのスクリプトによってUSB-AUDIOデバイスがUSBポートに接続されている場合、`/storage/bin/vol.py`がバックグラウンドで起動し続けるようにします。  
 `/storage/bin/vol.py`は本体のボリュームボタンが押されたことを検知して`/storage/bin/vol`スクリプトを呼び出して音量を調整しています。  
 
