@@ -13,19 +13,20 @@
 MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。 
 
 ## ダウンロード
-[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.8)  
+[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.9)  
 
 ## 謝辞
 - MagicX XU_MINI_MおよびAmberELECの開発チーム、XU MINI Mを愛するコミュニティーメンバーに感謝と敬意を表します。
 - 貢献者(順不同)
   - fishku,Ry,snake,shauninman,Gamma,paletochen,　and All Retro Handhelds community members!
   
-## Beta 0.8更新情報
-- [FIX] portmasterやmoonlight newのボタン配置が修正されました
-- [FIX] nesh,gbhなどハックロム用のディレクトリが利用可能になりました
-- [FIX] アナログスティックのデッドゾーンとスナップが修正され、より精密な操作が可能になりました
-- [FIX] USB-AUDIOの音量調整ロジックを変更し、内部スピーカーへ切り替わった際に音量が突然大きくなる現象が解決されました
-- [FIX] `ENABLE MAX PERFORMANCE`をONに設定された場合に、CPU,GPU,MEMの周波数がMAXパフォーマンスに強制されるようになりました
+## Beta 0.9更新情報
+- [FIX] Emulationstationの`ENABLE MAX PERFORMANCE`をON、OFF関わらずportsゲームを実行した際には、CPU,GPU,MEMの周波数がMAXパフォーマンスに強制されるようになりました
+- [FIX] Emulationstationのportsセクションにあったいくつかのスクリプトをtoolsセクションに移動しました
+- [NEW] Retroarch、drastic、ppssppのデータディレクトリをバックアップ＆リストアするスクリプト(`EMU_Backup`と`EMU_Restore`)がtoolsセクションに追加されました(使い方は後述)
+- [NEW] Retroarchのfake-08コアを追加しました
+  - fake-08コアでステートセーブが可能になりました
+    - retroarchの設定で`Settings -> Core -> Enable Bypass Core Info Save States Features`をONにしています
 
 ## 基本情報
 - USB Wifiドングルでネットワークへの接続が可能
@@ -79,6 +80,12 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 > 音量調整できない機器があるため大音量で音が流れる可能性があります。  
 > エミュレーターによっては音が途切れたり、動作が不安定になる場合があります。  
 
+## バックアップ＆リストアの使い方(`EMU_Backup`と`EMU_Restore`)
+- EMU_Backup
+  - toolsセクションにあるEMU_Backupを実行すると、SDカードの`EMU_Backup`ディレクトリに、Retroarch、drastic、ppssppのデータディレクトリがバックアップされます
+- EMU_Restore
+  - toolsセクションにあるEMU_Restoreを実行すると、SDカードの`EMU_Backup`ディレクトリにあるRetroarch、drastic、ppssppのデータディレクトリがリストアされます
+   - もしリストアしたくないファイルがある場合は、`EMU_Backup`ディレクトリからそのファイルをあらかじめ削除してください
 
 ## Emulationstationのテーマを自動的にインストール
 1. SDカード内の`ports/themes`ディレクトリにEmulationstationのテーマファイル(.zip)をコピーします
