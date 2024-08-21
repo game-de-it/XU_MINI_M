@@ -23,6 +23,8 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 ## Beta 0.9更新情報
 - [FIX] Emulationstationの`ENABLE MAX PERFORMANCE`をON、OFF関わらずportsゲームを実行した際には、CPU,GPU,MEMの周波数がMAXパフォーマンスに強制されるようになりました
 - [FIX] Emulationstationのportsセクションにあったいくつかのスクリプトをtoolsセクションに移動しました
+  - SDカード内のportsディレクトリにある下記のファイルは削除して構いません
+    - Install_Themes.sh check_CPU_GPU_freq.sh Create_ROMdir_SD.sh Start Pico-8.sh retroarch32.sh EMU_Backup.sh Switch_USB-AUDIO.sh retroarch64.sh EMU_Restore.sh _Scan ScummVM Games.sh
 - [NEW] Retroarch、drastic、ppssppのデータディレクトリをバックアップ＆リストアするスクリプト(`EMU_Backup`と`EMU_Restore`)がtoolsセクションに追加されました(使い方は後述)
 - [NEW] Retroarchのfake-08コアを追加しました
   - fake-08コアでステートセーブが可能になりました
