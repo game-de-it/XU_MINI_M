@@ -10,19 +10,21 @@
 This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MINI M.
 
 ## Download
-[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.8)
+[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.9)
 
 ## Acknowledgments
 - We would like to express our gratitude and respect to the MagicX XU_MINI_M and AmberELEC development teams, as well as to the community members who love XU MINI M.
 - Contributors (in no particular order)
   - fishku, Ry, snake, shauninman, Gamma, paletochen, and All Retro Handhelds community members!
 
-## Beta 0.8 Update Information
-- [FIX] The button layout for portmaster and moonlight new has been corrected.
-- [FIX] Directories for hacked ROMs such as nesh, gbh, etc., are now available.
-- [FIX] The dead zone and snap of the analog stick have been adjusted, enabling more precise control.
-- [FIX] The volume adjustment logic for USB-AUDIO has been modified, resolving the issue where the volume suddenly increases when switching to the internal speaker.
-- [FIX] When `ENABLE MAX PERFORMANCE` is set to ON, the CPU, GPU, and MEM frequencies are now forced to max performance.
+## Beta 0.9 Update Information
+- [FIX] Whether `ENABLE MAX PERFORMANCE` in Emulationstation is ON or OFF, the CPU, GPU, and MEM frequencies are now forced to MAX performance when running ports games.
+- [FIX] Several scripts from the ports section of Emulationstation have been moved to the tools section.
+- [NEW] Scripts to backup & restore data directories for Retroarch, Drastic, and PPSSPP (`EMU_Backup` and `EMU_Restore`) have been added to the tools section (usage described later).
+- [NEW] The fake-08 core for Retroarch has been added.
+  - State saves are now possible with the fake-08 core.
+    - `Settings -> Core -> Enable Bypass Core Info Save States Features` is set to ON in Retroarch's settings.
+
 
 ## Basic Information
 - You can connect to the network using a USB Wifi dongle.
@@ -74,6 +76,14 @@ This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MI
 > It is not guaranteed that all USB-DAC and Bluetooth AUDIO devices will work.  
 > Some devices may have issues with volume control, leading to very loud audio.  
 > Depending on the emulator, sound may cut out or operation may become unstable.
+
+## How to Use Backup & Restore (`EMU_Backup` and `EMU_Restore`)
+- EMU_Backup
+  - Running EMU_Backup in the tools section will back up the data directories for Retroarch, Drastic, and PPSSPP to the `EMU_Backup` directory on the SD card.
+- EMU_Restore
+  - Running EMU_Restore in the tools section will restore the data directories for Retroarch, Drastic, and PPSSPP from the `EMU_Backup` directory on the SD card.
+    - If there are files you do not want to restore, please delete them from the `EMU_Backup` directory beforehand.
+
 
 ## Automatic Installation of Themes in Emulationstation
 1. Copy the theme file (.zip) for Emulationstation to the `ports/themes` directory on the SD card.
