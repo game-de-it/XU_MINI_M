@@ -20,6 +20,8 @@ This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MI
 ## Beta 0.9 Update Information
 - [FIX] Whether `ENABLE MAX PERFORMANCE` in Emulationstation is ON or OFF, the CPU, GPU, and MEM frequencies are now forced to MAX performance when running ports games.
 - [FIX] Several scripts from the ports section of Emulationstation have been moved to the tools section.
+  - You can delete the following files in the ports directory on the SD card
+    - Install_Themes.sh check_CPU_GPU_freq.sh Create_ROMdir_SD.sh Start Pico-8.sh retroarch32.sh EMU_Backup.sh Switch_USB-AUDIO.sh retroarch64.sh EMU_Restore.sh _Scan ScummVM Games.sh
 - [NEW] Scripts to backup & restore data directories for Retroarch, Drastic, and PPSSPP (`EMU_Backup` and `EMU_Restore`) have been added to the tools section (usage described later).
 - [NEW] The fake-08 core for Retroarch has been added.
   - State saves are now possible with the fake-08 core.
