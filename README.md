@@ -28,6 +28,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 
 - [NEW] Toolsセクションに351Filesアプリが追加されました
 - [NEW] GZDOOMとShadow Warriorのキーマッピングを設定しました
+- [FIX] 実際に設定された周波数になっているかは確認ができていませんが、MAXパフォーマンス時にCPU,GPU,MEMの周波数が変更されました(CPU2016MHz,GPU1000MHz,MEM1116MHz)
 - [FIX] OS起動時に内部スピーカーの音量が特定の値に固定されてしまう問題を修正されました
 - [FIX] ppssppのキーマッピングを修正しました(Circles, crosses, squares, triangles)
 - [FIX] 画面輝度の最低値が1に変更されました
