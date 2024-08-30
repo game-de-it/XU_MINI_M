@@ -25,7 +25,8 @@ This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MI
 
 - [NEW] The 351Files app has been added to the Tools section.
 - [NEW] Key mappings for GZDOOM and Shadow Warrior have been configured.
-- [FIX] At MAX performance, the CPU, GPU, and MEM frequencies were changed to the following: (CPU 2016MHz, GPU 1000MHz, MEM 1116MHz)
+- [FIX] Although it has not been confirmed whether the frequencies are actually set, the frequencies of the CPU, GPU, and MEM were changed to the following during MAX performance.
+CPU2016MHz, GPU1000MHz, MEM1116MHz
 - [FIX] Fixed an issue where the internal speaker volume would be set to a specific value upon OS startup.
 - [FIX] Fixed the key mapping for PPSSPP (circles, crosses, squares, triangles).
 - [FIX] The minimum screen brightness has been changed to 1.
