@@ -13,22 +13,33 @@
 MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。 
 
 ## ダウンロード
-[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.9)  
+[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.10)  
 
 ## 謝辞
 - MagicX XU_MINI_MおよびAmberELECの開発チーム、XU MINI Mを愛するコミュニティーメンバーに感謝と敬意を表します。
 - 貢献者(順不同)
-  - fishku,Ry,snake,shauninman,Gamma,paletochen,　and All Retro Handhelds community members!
+  - fishku,Ry,snake,shauninman,Gamma,paletochen, GHROTIC,　and All Retro Handhelds community members!
   
-## Beta 0.9更新情報
-- [FIX] Emulationstationの`ENABLE MAX PERFORMANCE`をON、OFF関わらずportsゲームを実行した際には、CPU,GPU,MEMの周波数がMAXパフォーマンスに強制されるようになりました
-- [FIX] Emulationstationのportsセクションにあったいくつかのスクリプトをtoolsセクションに移動しました
-  - SDカード内のportsディレクトリにある下記のファイルは削除して構いません
-    - Install_Themes.sh check_CPU_GPU_freq.sh Create_ROMdir_SD.sh Start Pico-8.sh retroarch32.sh EMU_Backup.sh Switch_USB-AUDIO.sh retroarch64.sh EMU_Restore.sh _Scan ScummVM Games.sh
-- [NEW] Retroarch、drastic、ppssppのデータディレクトリをバックアップ＆リストアするスクリプト(`EMU_Backup`と`EMU_Restore`)がtoolsセクションに追加されました(使い方は後述)
-- [NEW] Retroarchのfake-08コアを追加しました
-  - fake-08コアでステートセーブが可能になりました
-    - retroarchの設定で`Settings -> Core -> Enable Bypass Core Info Save States Features`をONにしています
+0.10の変更点
+> [!CAUTION]
+> このバージョンではエミュ関連のデータが多く修正されました。
+> 以前のバージョンでバックアップをしている場合は、エミュデータのロールバックが発生しまうため`EMU_Restore`を実行しないでください。
+> 改めて各自でこのバージョンでエミュ関連の設定をした後に、`EMU_Backup`を実行してください。
+
+- [NEW] Toolsセクションに351Filesアプリが追加されました
+- [NEW] GZDOOMとShadow Warriorのキーマッピングを設定しました
+- [FIX] OS起動時に内部スピーカーの音量が特定の値に固定されてしまう問題を修正されました
+- [FIX] ppssppのキーマッピングを修正しました(Circles, crosses, squares, triangles)
+- [FIX] 画面輝度の最低値が1に変更されました
+- [FIX] EMUバックアップリストアに`gzdoom`と`raze`が追加されました
+- [FIX] ROMディレクトリの下記シンボリックリンクを修正しました
+  - BGM,bezels,bios,build,cdi,savestates,update
+- [FIX] Dパッドを素早く動かした際に動作が不安定になる問題が修正されました
+  - RETRORUN:FLYCAST2021のキーマップを修正する方法がわからないため、この修正によりDパッドが使えなくなりました(修正方法を調査中)
+    - ドリームキャストのエミュレータはデフォルトでRETROARCH:FLYCAST2021に設定してあります
+- [FIX] retroarchのrumble機能が有効になっているとクラッシュするバグが発見されました
+  - もしretroarchがクラッシュする場合は`Quick Setting -> Core Options`にある項目からrumble機能を探して無効または数値を0にしてください
+
 
 ## 基本情報
 - USB Wifiドングルでネットワークへの接続が可能
@@ -84,9 +95,9 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 
 ## バックアップ＆リストアの使い方(`EMU_Backup`と`EMU_Restore`)
 - EMU_Backup
-  - toolsセクションにあるEMU_Backupを実行すると、SDカードの`EMU_Backup`ディレクトリに、Retroarch、drastic、ppssppのデータディレクトリがバックアップされます
+  - toolsセクションにあるEMU_Backupを実行すると、SDカードの`EMU_Backup`ディレクトリに、Retroarch、drastic、ppsspp、gzdoom、razeのデータディレクトリがバックアップされます
 - EMU_Restore
-  - toolsセクションにあるEMU_Restoreを実行すると、SDカードの`EMU_Backup`ディレクトリにあるRetroarch、drastic、ppssppのデータディレクトリがリストアされます
+  - toolsセクションにあるEMU_Restoreを実行すると、SDカードの`EMU_Backup`ディレクトリにあるRetroarch、drastic、ppsspp、gzdoom、razeのデータディレクトリがリストアされます
    - もしリストアしたくないファイルがある場合は、`EMU_Backup`ディレクトリからそのファイルをあらかじめ削除してください
 
 ## Emulationstationのテーマを自動的にインストール
