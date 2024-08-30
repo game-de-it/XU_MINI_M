@@ -50,7 +50,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
   - SDカードに`ports_scripts`ディレクトリが存在する場合は、そのディレクトリを削除してください
   - portsセクションからPortmasterを起動できます
   - Portmasterを利用してportsゲームをインストールした後はゲームリストを更新してください
-- デフォルトでは一部のエミュレータを除いてCPU周波数は負荷に応じて自動的に400MHz~1600MHzの間で増減します
+- デフォルトでは一部のエミュレータを除いてCPU周波数は負荷に応じて自動的に400MHz~2016MHzの間で増減します
   - エミュレーターごとにMAXパフォーマンスを得る設定をする場合はROM選択画面で`SELECT`ボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`をONに設定します
   - ROMごとにMAXパフォーマンスを得る設定する場合は、任意のROMにカーソルを合わせてYボタンを押して`ADVANCED SYSTEM OPTIONS`の`ENABLE MAX PERFORMANCE`をONに設定します
   - 全てのエミュレータにMAXパフォーマンスを得る設定させる場合は、Emulationstationの`GAME SETTINGS`->`ENABLE MAX PERFORMANCE`をONに設定します
