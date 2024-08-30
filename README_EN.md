@@ -10,22 +10,33 @@
 This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MINI M.
 
 ## Download
-[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.9)
+[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.10)
 
 ## Acknowledgments
 - We would like to express our gratitude and respect to the MagicX XU_MINI_M and AmberELEC development teams, as well as to the community members who love XU MINI M.
 - Contributors (in no particular order)
-  - fishku, Ry, snake, shauninman, Gamma, paletochen, and All Retro Handhelds community members!
+  - fishku, Ry, snake, shauninman, Gamma, paletochen, GHROTIC, and All Retro Handhelds community members!
 
-## Beta 0.9 Update Information
-- [FIX] Whether `ENABLE MAX PERFORMANCE` in Emulationstation is ON or OFF, the CPU, GPU, and MEM frequencies are now forced to MAX performance when running ports games.
-- [FIX] Several scripts from the ports section of Emulationstation have been moved to the tools section.
-  - You can delete the following files in the ports directory on the SD card
-    - Install_Themes.sh check_CPU_GPU_freq.sh Create_ROMdir_SD.sh Start Pico-8.sh retroarch32.sh EMU_Backup.sh Switch_USB-AUDIO.sh retroarch64.sh EMU_Restore.sh _Scan ScummVM Games.sh
-- [NEW] Scripts to backup & restore data directories for Retroarch, Drastic, and PPSSPP (`EMU_Backup` and `EMU_Restore`) have been added to the tools section (usage described later).
-- [NEW] The fake-08 core for Retroarch has been added.
-  - State saves are now possible with the fake-08 core.
-    - `Settings -> Core -> Enable Bypass Core Info Save States Features` is set to ON in Retroarch's settings.
+## Changes in Version 0.10
+> [!CAUTION]
+> This version includes significant changes to emulator-related data.
+> If you have backed up data from a previous version, do not run `EMU_Restore`, as it will result in rolling back emulator data. 
+> After configuring the emulator settings for this version, please run `EMU_Backup` again.
+
+- [NEW] The 351Files app has been added to the Tools section.
+- [NEW] Key mappings for GZDOOM and Shadow Warrior have been configured.
+- [FIX] At MAX performance, the CPU, GPU, and MEM frequencies were changed to the following: (CPU 2016MHz, GPU 1000MHz, MEM 1116MHz)
+- [FIX] Fixed an issue where the internal speaker volume would be set to a specific value upon OS startup.
+- [FIX] Fixed the key mapping for PPSSPP (circles, crosses, squares, triangles).
+- [FIX] The minimum screen brightness has been changed to 1.
+- [FIX] `gzdoom` and `raze` have been added to EMU backup and restore.
+- [FIX] Fixed the following symbolic links in the ROM directory:
+  - BGM, bezels, bios, build, cdi, savestates, update.
+- [FIX] Fixed an issue where rapid movement of the D-pad would cause unstable behavior.
+  - Due to an inability to fix the key mapping for RETRORUN:FLYCAST2021, the D-pad has become unusable (investigating a solution).
+    - Therefore, the Dreamcast emulator is set to RETROARCH:FLYCAST2021 by default.
+- [FIX] A bug was found where Retroarch would crash if the rumble feature was enabled.
+  - If Retroarch crashes, locate the rumble feature in `Quick Setting -> Core Options` and either disable it or set the value to 0.
 
 
 ## Basic Information
@@ -81,9 +92,9 @@ This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MI
 
 ## How to Use Backup & Restore (`EMU_Backup` and `EMU_Restore`)
 - EMU_Backup
-  - Running EMU_Backup in the tools section will back up the data directories for Retroarch, Drastic, and PPSSPP to the `EMU_Backup` directory on the SD card.
+  - Running EMU_Backup in the tools section will back up the data directories for Retroarch, Drastic, gzdoom, raze, and PPSSPP to the `EMU_Backup` directory on the SD card.
 - EMU_Restore
-  - Running EMU_Restore in the tools section will restore the data directories for Retroarch, Drastic, and PPSSPP from the `EMU_Backup` directory on the SD card.
+  - Running EMU_Restore in the tools section will restore the data directories for Retroarch, Drastic, gzdoom, raze, and PPSSPP from the `EMU_Backup` directory on the SD card.
     - If there are files you do not want to restore, please delete them from the `EMU_Backup` directory beforehand.
 
 
