@@ -48,7 +48,7 @@ CPU2016MHz, GPU1000MHz, MEM1116MHz
   - If the `ports_scripts` directory exists on the SD card, please delete that directory.
   - You can start Portmaster from the ports section.
   - After installing a ports game using Portmaster, please update the game list.
-- By default, the CPU frequency automatically scales between 400MHz and 1600MHz depending on the load, except for some emulators.
+- By default, the CPU frequency automatically scales between 400MHz and 2016MHz depending on the load, except for some emulators.
   - If you want to set this for each emulator, press the `SELECT` button on the ROM selection screen and turn ON `ENABLE MAX PERFORMANCE` in `ADVANCED SYSTEM OPTIONS`.
   - If you want to set this for each ROM, highlight the desired ROM, press the Y button, and turn ON `ENABLE MAX PERFORMANCE` in `ADVANCED SYSTEM OPTIONS`.
   - If you want to set this for all emulators, turn ON `ENABLE MAX PERFORMANCE` in Emulationstation's `GAME SETTINGS`.
