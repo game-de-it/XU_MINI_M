@@ -9,37 +9,23 @@
 
 
 
+# ❗plumOSはv1.0を持って開発および更新を終了しました❗
+
 ## 特徴
 MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。 
 
 ## ダウンロード
-[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.10)  
+[「Releases」からファイルをダウンロードできます。](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_1.0)  
 
 ## 謝辞
 - MagicX XU_MINI_MおよびAmberELECの開発チーム、XU MINI Mを愛するコミュニティーメンバーに感謝と敬意を表します。
 - 貢献者(順不同)
   - fishku,Ry,snake,shauninman,Gamma,paletochen, GHROTIC,　and All Retro Handhelds community members!
   
-## 0.10の変更点
-> [!CAUTION]
-> このバージョンではエミュ関連のデータが多く修正されました。
-> 以前のバージョンでバックアップをしている場合は、エミュデータのロールバックが発生しまうため`EMU_Restore`を実行しないでください。
-> 改めて各自でこのバージョンでエミュ関連の設定をした後に、`EMU_Backup`を実行してください。
-
-- [NEW] Toolsセクションに351Filesアプリが追加されました
-- [NEW] GZDOOMとShadow Warriorのキーマッピングを設定しました
-- [FIX] 実際に設定された周波数になっているかは確認ができていませんが、MAXパフォーマンス時にCPU,GPU,MEMの周波数が変更されました(CPU2016MHz,GPU1000MHz,MEM1116MHz)
-- [FIX] OS起動時に内部スピーカーの音量が特定の値に固定されてしまう問題を修正されました
-- [FIX] ppssppのキーマッピングを修正しました(Circles, crosses, squares, triangles)
-- [FIX] 画面輝度の最低値が1に変更されました
-- [FIX] EMUバックアップリストアに`gzdoom`と`raze`が追加されました
-- [FIX] ROMディレクトリの下記シンボリックリンクを修正しました
-  - BGM,bezels,bios,build,cdi,savestates,update
-- [FIX] Dパッドを素早く動かした際に動作が不安定になる問題が修正されました
-  - RETRORUN:FLYCAST2021のキーマップを修正する方法がわからないため、この修正によりDパッドが使えなくなりました(修正方法を調査中)
-    - ドリームキャストのエミュレータはデフォルトでRETROARCH:FLYCAST2021に設定してあります
-- [FIX] retroarchのrumble機能が有効になっているとクラッシュするバグが発見されました
-  - もしretroarchがクラッシュする場合は`Quick Setting -> Core Options`にある項目からrumble機能を探して無効または数値を0にしてください
+## v1.0の変更点(最終バージョン)
+- [NEW] Retroarchに`pixel-art-scaling`シェーダを追加しました
+- [FIX] Toolsセクションに351Filesアプリが追加されていなかった問題を修正しました
+- [FIX] v0.9の`rk3562-uboot.dtb`を適用して安定性を確保しました
 
 
 ## 基本情報
@@ -67,7 +53,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 
 ## ROMディレクトリの自動作成
 - FAT32でフォーマットされたSD2を接続した状態でOSを起動すると、自動的にROMディレクトリを生成してくれます
-- `ports`セクションにある`Create_ROMdir_SD`を実行するとSD1およびSD2にROMディレクトリが作成されます
+- `tools`セクションにある`Create_ROMdir_SD`を実行するとSD1およびSD2にROMディレクトリが作成されます
 
 ## SD1とSD2を切り替える手順
 - Emulationstationの`TF CARD MANAGEMENT`にある機能を使うと、SD1とSD2のROMディレクトリがあるパーティションを切り替えることができます
@@ -86,7 +72,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 - `Switch_USB-AUDIO`を実行しても切り替わらない場合、USBポートからデバイスを抜いて再度USBポートに差し込んでみてください
 
 ### 使い方
-1. USBポートに機器を接続した後に、`ports`セクションにある`Switch_USB-AUDIO`を実行します
+1. USBポートに機器を接続した後に、`tools`セクションにある`Switch_USB-AUDIO`を実行します
 2. Bluetooth機器の場合はペアリングをします
 3. ゲームを起動して音が出ることを確認します
 > [!WARNING]
@@ -103,7 +89,7 @@ MagicX XU MINI MのStockOS_20240811(AmberELEC)を改修したCFWです。
 
 ## Emulationstationのテーマを自動的にインストール
 1. SDカード内の`ports/themes`ディレクトリにEmulationstationのテーマファイル(.zip)をコピーします
-2. Emulationstationのportsセクションにある`Install_Themes`を実行します
+2. Emulationstationのtoolsセクションにある`Install_Themes`を実行します
 3. `UI SETTINGS`->`THEME SET`からインストールしたテーマを選択できます
 
 ## PICO-8の遊び方
@@ -129,7 +115,7 @@ scummvm/
     `-- sky.dsk
 ```
 
-3. Emulationstationの`ports`セクションにある`_Scan ScummVM Games`を実行すると、`ScummVM`セクションにゲームを起動するためのファイルが作成されます
+3. Emulationstationの`tools`セクションにある`_Scan ScummVM Games`を実行すると、`ScummVM`セクションにゲームを起動するためのファイルが作成されます
    - `_Scan ScummVM Games`がない場合はOSを再起動すると自動的に作成されるはずです
 4. `ScummVM`セクションの`Beneath a Steel Sky (sky)`を実行するとゲームが開始します
 
