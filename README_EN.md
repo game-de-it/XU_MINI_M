@@ -6,38 +6,24 @@
 
 <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/sc02.jpg" width="240"> <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/sc03.jpg" width="240">
 
+
+# ❗plumOS has finished development and updates with v1.0 ❗
+
 ## Features
 This is a CFW modified from the StockOS_20240811 (AmberELEC) of the MagicX XU MINI M.
 
 ## Download
-[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_0.10)
+[You can download the files from "Releases".](https://github.com/game-de-it/XU_MINI_M/releases/tag/plumOS_XU_MINI_M_1.0)
 
 ## Acknowledgments
 - We would like to express our gratitude and respect to the MagicX XU_MINI_M and AmberELEC development teams, as well as to the community members who love XU MINI M.
 - Contributors (in no particular order)
   - fishku, Ry, snake, shauninman, Gamma, paletochen, GHROTIC, and All Retro Handhelds community members!
 
-## Changes in Version 0.10
-> [!CAUTION]
-> This version includes significant changes to emulator-related data.
-> If you have backed up data from a previous version, do not run `EMU_Restore`, as it will result in rolling back emulator data. 
-> After configuring the emulator settings for this version, please run `EMU_Backup` again.
-
-- [NEW] The 351Files app has been added to the Tools section.
-- [NEW] Key mappings for GZDOOM and Shadow Warrior have been configured.
-- [FIX] Although it has not been confirmed whether the frequencies are actually set, the frequencies of the CPU, GPU, and MEM were changed to the following during MAX performance.
-CPU2016MHz, GPU1000MHz, MEM1116MHz
-- [FIX] Fixed an issue where the internal speaker volume would be set to a specific value upon OS startup.
-- [FIX] Fixed the key mapping for PPSSPP (circles, crosses, squares, triangles).
-- [FIX] The minimum screen brightness has been changed to 1.
-- [FIX] `gzdoom` and `raze` have been added to EMU backup and restore.
-- [FIX] Fixed the following symbolic links in the ROM directory:
-  - BGM, bezels, bios, build, cdi, savestates, update.
-- [FIX] Fixed an issue where rapid movement of the D-pad would cause unstable behavior.
-  - Due to an inability to fix the key mapping for RETRORUN:FLYCAST2021, the D-pad has become unusable (investigating a solution).
-    - Therefore, the Dreamcast emulator is set to RETROARCH:FLYCAST2021 by default.
-- [FIX] A bug was found where Retroarch would crash if the rumble feature was enabled.
-  - If Retroarch crashes, locate the rumble feature in `Quick Setting -> Core Options` and either disable it or set the value to 0.
+## Changes in v1.0 (final version)
+- [NEW] Added `pixel-art-scaling` shader to Retroarch
+- [FIX] Fixed the problem that 351Files app was not added to the Tools section.
+- [FIX] Applied v0.9 `rk3562-uboot.dtb` to ensure stability
 
 
 ## Basic Information
@@ -65,7 +51,7 @@ CPU2016MHz, GPU1000MHz, MEM1116MHz
 
 ## Automatic Creation of ROM Directories
 - If you boot the OS with an SD2 formatted in FAT32 connected, ROM directories will be automatically generated.
-- By executing `Create_ROMdir_SD` in the `ports` section, ROM directories will be created on both SD1 and SD2.
+- By executing `Create_ROMdir_SD` in the `tools` section, ROM directories will be created on both SD1 and SD2.
 
 ## Procedure to Switch Between SD1 and SD2
 - You can switch the partition containing the ROM directories for SD1 and SD2 using the feature in Emulationstation's `TF CARD MANAGEMENT`.
@@ -83,7 +69,7 @@ CPU2016MHz, GPU1000MHz, MEM1116MHz
 - If the device does not switch after running `Switch_USB-AUDIO`, try unplugging the device from the USB port and plugging it back in.
 
 ### Usage
-1. After connecting the device to the USB port, execute `Switch_USB-AUDIO` in the `ports` section.
+1. After connecting the device to the USB port, execute `Switch_USB-AUDIO` in the `tools` section.
 2. For Bluetooth devices, perform pairing.
 3. Start a game and confirm that sound is output.
 > [!WARNING]
@@ -101,14 +87,14 @@ CPU2016MHz, GPU1000MHz, MEM1116MHz
 
 ## Automatic Installation of Themes in Emulationstation
 1. Copy the theme file (.zip) for Emulationstation to the `ports/themes` directory on the SD card.
-2. Execute `Install_Themes` in the ports section of Emulationstation.
+2. Execute `Install_Themes` in the tools section of Emulationstation.
 3. You can select the installed theme from `UI SETTINGS`->`THEME SET`.
 
 ## How to Play PICO-8
 1. First, purchase a PICO-8 license from the following site and download the `Raspberry Pi` zip file:
    https://www.lexaloffle.com/pico-8.php
 2. After unzipping the file, copy `pico8_64` and `pico8.dat` to the `pico-8` directory on the SD card.
-3. If you want to start the native PICO-8, boot plumOS, then execute `Splore.p8` in the `PICO-8` section of Emulationstation or `Start Pico-8` in the `ports` section.
+3. If you want to start the native PICO-8, boot plumOS, then execute `Splore.p8` in the `PICO-8` section of Emulationstation or `Start Pico-8` in the `tools` section.
    - If `Splore.p8` and `Start Pico-8` are missing, they should be automatically created upon rebooting the OS.
 
 ## How to Play ScummVM
@@ -126,7 +112,7 @@ scummvm/
 ```
 
 
-3. Execute `_Scan ScummVM Games` in the `ports` section of Emulationstation, and a file to start the game will be created in the `ScummVM` section.
+3. Execute `_Scan ScummVM Games` in the `tools` section of Emulationstation, and a file to start the game will be created in the `ScummVM` section.
    - If `_Scan ScummVM Games` is missing, it should be automatically created upon rebooting the OS.
 4. Execute `Beneath a Steel Sky (sky)` in the `ScummVM` section to start the game.
 
