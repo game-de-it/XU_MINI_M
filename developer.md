@@ -3,6 +3,7 @@ This page explains the modifications made to stockOS to create plumOS.
 
 ## Boot Sequence
 As shown in the image below, the processes are executed in order from top to bottom. The final process, `amberelec.target`, triggers the execution of `amberelec-autostart.service`, which then runs `/storage/.config/custom_start.sh`.  
+`systemd-analyze plot > bootseq.svg`  
 <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/bootseq.svg" width="480">   
 
 ## About custom_start.sh
@@ -68,6 +69,7 @@ End
 
 ## 起動シーケンス
 下記の画像のように上から順番にプロセスが実行され、一番最後の`amberelec.target`によって`amberelec-autostart.service`が実行されて`/storage/.config/custom_start.sh`が実行されます。  
+`systemd-analyze plot > bootseq.svg`  
 <img src="https://github.com/game-de-it/XU_MINI_M/blob/main/assets/bootseq.svg" width="480">   
 
 ## custom_start.shについて
